@@ -1,0 +1,62 @@
+<!-- <h1>Built-In Pipes</h1> -->
+
+<h2>{{name | uppercase}}</h2>
+<h2>{{name | lowercase}}</h2>
+<h2>{{day}}</h2>
+
+<!-- Date Pipe -->
+<h2>{{day | date}}</h2>
+<h3>{{day|date:'shortDate'}}</h3>
+<h3>{{day|date:'fullDate'}}</h3>
+<h3>{{day|date:'d/M/y'}}</h3>
+<!-- Parameterized pipe -->
+<h3>{{day|date:"MM/dd/yy"}}</h3>
+
+<!-- Pipe channing -->
+<h3>{{day|date:'fullDate' |uppercase}}</h3>
+
+<!-- Currency Pipe -->
+<div>
+<p>Currency Pipe</p>
+<p>{{cur|currency:'GBP'}}</p>
+</div>
+
+
+<!-- Decimal pipes -->
+
+<div>
+    <p>Decimal pipe</p>
+    <p>{{3.1|number:'4.2-3'}}</p>
+</div>
+
+<!-- Json pipe -->
+<div>
+        <p>Json pipe</p>
+        <p>{{jsonVal|json}}</p>
+    </div>
+<!-- percent pipe -->
+<div>
+    <p>percent pipe</p>
+    <p>{{1.331|percent:'2.2-3'}}</p>
+</div>
+
+<!-- Slice pipes -->
+<div>
+    <p>Slice pipe</p>
+    <p>{{[1,2,3,4,5,6]|slice:2:-2}}</p>
+</div>
+<ul>
+    <li *ngFor="let v of [1,2,3,4,5,6] | slice:2:-2">
+        {{v}}
+
+    </li>
+</ul>
+
+<!-- Async Pipes -->
+
+<!-- Custom Pipes -->
+<h3>Sorted array</h3>
+
+<div>{{arr | sort:'ascending'}}</div>
+
+<div>{{arr |sort:'descending'}}</div>

@@ -1,0 +1,20 @@
+<table class="table table-hover">
+
+  <thead>
+    <th>SNo</th>
+    <th>Model</th>
+    <th>Brand</th>
+    <th>Price</th>
+    <th>Quantity</th>
+  </thead>
+  <tbody>
+   <tr *ngFor="let p of products">
+     
+    <td>{{p.sno}}</td>
+     <td>{{p.model}}</td>
+     <td>{{p.brand}}</td>
+     <td>{{p.price}}</td>
+     <td>{{p.quantity}}</td>
+  </tr>
+  </tbody>
+</table>
